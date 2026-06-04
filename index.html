@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+   *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+   }
+   body{
+    background: white;
+   }
+   nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    /*background: rgb(205, 224, 121) ;*/
+    background:#111827;
+    color:white;
+   }
+   nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+   }
+   .cart-btn a{
+    background: #8bc34a;
+    color:white;
+    text-decoration: none;
+    padding:10px 20px;
+    border-radius:8px;
+    font-weight: bold;
+    font-size:16px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+    
+   }
+    cart-btn a:hover{
+    background: #689f38;
+    box-shadow:0 6px 15px rgba(0,0,0,0.3);
+    
+   }
+   .cart-btn i{
+    margin-right:6px;
+   }
+ ul a{
+            color:white;
+            text-decoration:none ;
+            font-size:18px;
+        }
+ ul a:hover{
+            color:#8bc34a;
+        }
+   nav li i{
+    margin-right:8px;
+   }
+   
+   .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#8bc34a;
+        }
+   .hero{
+    display:flex;
+    height:100vh;
+    margin-top:20px;
+   }
+   .hero-image{
+   height:100%;
+     width:66%;
+     
+   }
+   .hero-image img{
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    object-fit:cover;
+   }
+   .hero-text{
+    width:34%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:60px;
+    background:#f8f8f8;
+   
+   }
+   .hero-text h1{
+    line-height:1.1;
+    font-size:60px;
+    font-weight:700;
+    margin-bottom:25px;
+    color:#222;
+
+   }
+   .hero-text p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:35px;
+    max-width:500px;
+    margin-left:40px;
+   }
+.hero-text button{
+    width:200px;
+    padding:15px;
+    font-size:18px;
+    font-weight:bold;
+    border:none;
+    color:white;
+    background:#7cb342;
+    cursor:pointer;
+    border-radius:8px;
+}
+.hero-text button:hover{
+    background:#1f2937 ;
+}
+footer{
+    background:#1f2937;
+    color:white;
+    padding: 40px 20px;
+    text-align:center;
+    margin-top:50px;
+}
+.footer-text h3{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#8bc34a;
+}
+.footer-text p{
+    margin:10px 0;
+    font-size:16px;
+    color:#d1d5db;
+}
+.footer-text p:last-child{
+    margin-top:20px;
+    color:#9ca3af;
+    font-size:14px;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Elite Shop</div>
+        <ul>
+            <li><a href="index.html">
+            <i class="fa-solid fa-home"></i> Home </a>
+            </li>
+
+            <li><a href="productpage.html"><i class="fa-solid fa-box"></i>Products</a></li>
+            <li><a href="about.html"> <i class="fa-solid fa-info-circle"></i>About</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-address-book"></i> Contacts</a></li>
+        </ul>
+        <div class="cart-btn">
+          <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i>Cart</a> </div>
+        </nav>
+
+        <div class="hero">
+<div class="hero-image">
+            <img src="main-img.png" alt=""> </div>
+
+       
+            <div class="hero-text">
+                <h1>Shop Smarter.<br>Live Better.</h1>
+                <p>
+                    Explore thousands of handpicked
+                products designed
+                         to make life easier,smarter,and 
+                more enjoyable.
+                         Experience effortless shopping with
+                trusted quality
+                         and unbeatable prices.
+
+                </p>
+                <button class="shop-btn" onclick="shopNow()">Shop Now</button>
+            </div>
+      </div>
+        
+            
+<footer>
+    <div class="footer-text">
+        <h3>Elite Shop</h3>
+        <p> Your trusted online shopping destination.</p>
+        <p>support@eliteshop.com</p>
+        <p> +91 8919782368</p>
+            <p>&copy; 2026 Elite Shop. All Rights Reserved. </p>
+            </div>
+       </footer>
+        
+        <script>
+            function shopNow(){
+                alert("Welcome to MyShop!");
+            }
+        </script>
+    
+</body>
+</html>

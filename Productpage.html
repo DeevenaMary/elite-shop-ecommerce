@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-page</title>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial,sans-serif;
+      }
+      body{
+        background: #f4f4f4;
+      }
+        nav{
+            background:#111827;
+            color:white;
+            display:flex;
+            padding:20px 50px;
+            align-items:center;
+            justify-content:space-between;
+        }
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#8bc34a;
+        }
+        ul{
+            display:flex;
+            gap:30px;
+            list-style:none;
+        }
+        ul a{
+            color:white;
+            text-decoration:none ;
+            font-size:18px;
+        }
+        ul a:hover{
+            color:#8bc34a;
+        }
+        .cart-btn{
+            background:#8bc34a;
+             color:white;
+             padding:10px 20px;
+             border-radius:6px;
+             cursor:pointer;
+        }
+        .cart-btn:hover{
+            background:#388E3C;
+        }
+
+        .product-header{
+            text-align:center;
+            margin:40px 0;
+
+        }
+        .product-header h1{
+            font-size:42px;
+
+        }
+        .product-header p{
+            color:#666;
+            font-size:18px;
+        }
+        .products{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+             gap:25px;
+             padding:20px;
+        }
+        .product-card{
+            width:250px;
+            background: white;
+            border-radius:10px;
+            padding:15px;
+            text-align:center;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+
+            transition:0.3s;
+        }
+        .product-card img{
+            width:100%;
+            height:220px;
+            object-fit:contain;
+            border-radius:10px;
+
+        }
+        .product-card h3{
+            margin:15px 0 10px;
+
+        }
+        .price{
+            color:green;
+            font-size:20px;
+            font-weight:bold;
+
+        }
+        button{
+            margin-top:10px;
+            font-weight:bold;
+            padding:12px 25px;
+            border:none;
+            background:#7bc342;
+            color:white;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        button:hover{
+            background:#388E3C;
+        }
+        .product-card:hover{
+            transform:translateY(-5px);
+            transition:0.3s;
+            box-shadow:0 8px 20px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+     <nav>
+        <div class="logo">Elite Shop</div>
+        <ul>
+            <li><a href="index.html">
+            <i class="fa-solid fa-home"></i> Home </a>
+            </li>
+
+            <li><a href="productpage.html"><i class="fa-solid fa-box"></i>Products</a></li>
+            <li><a href="about.html"> <i class="fa-solid fa-info-circle"></i>About</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-address-book"></i> Contacts</a></li>
+        </ul>
+        <div class="cart-btn">Cart</div>
+     </nav>
+
+     <div class="product-header">
+     <h1> Our Products</h1>
+     <p>Explore our latest collections of premium products.</p>
+</div>
+
+     <div class="products">
+
+        <div class="product-card">
+            <img src="smartwatch.png">
+            <h3>
+                <a href="productDetails.html">Smart Watch</a></h3>
+            <p class="price">&#8377;2,499</p>
+            <button>Add to Cart</button>
+        </div>
+
+                <div class="product-card">
+            <img src="buds.jpeg">
+            <h3>Wireless Earbuds</h3>
+            <p class="price">&#8377;1,999</p>
+            <button>Add to Cart</button>
+        </div>
+
+                <div class="product-card">
+            <img src="smartphone.webp">
+            <h3>SmartPhone</h3>
+            <p class="price">&#8377;14,999</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Laptop.jpeg">
+            <h3>Laptop</h3>
+            <p class="price">&#8377;49,999</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="shoes.webp">
+            <h3>Running Shoes</h3>
+            <p class="price">&#8377;2,999</p>
+            <button>Add to Cart</button>
+        </div>
+
+                <div class="product-card">
+            <img src="bag.jpeg">
+            <h3>BackPack</h3>
+            <p class="price">&#8377;999</p>
+            <button>Add to Cart</button>
+        </div>
+
+                <div class="product-card">
+            <img src="sunglass.jpeg">
+            <h3>Sunglasses</h3>
+            <p class="price">&#8377;799</p>
+            <button>Add to Cart</button>
+        </div>
+
+                <div class="product-card">
+            <img src="speaker.jpeg">
+            <h3>Bluetooth Speaker</h3>
+            <p class="price">&#8377;1,499</p>
+            <button>Add to Cart</button>
+        </div>
+
+     </div>
+</body>
+</html>

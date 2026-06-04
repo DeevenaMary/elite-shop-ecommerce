@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        background:#f4f4f4 ;
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+
+    }
+    nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    /*background: rgb(205, 224, 121) ;*/
+    background:#111827;
+    color:white;
+   }
+
+ .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#8bc34a;
+        }
+    nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+   }
+ ul a{
+            color:white;
+            text-decoration:none ;
+            font-size:18px;
+        }
+ ul a:hover{
+            color:#8bc34a;
+        }
+   nav li i{
+    margin-right:8px;
+   }
+   
+   
+    h1{
+        text-align:center;
+        margin:30px 0;
+    }
+    .cart-container{
+        width:80%;
+        margin:auto;
+    }
+    .cart-item{
+        background:white ;
+        display:flex;
+        align-items:center;
+        gap:30px;
+        padding:20px;
+        border-radius:10px;
+        margin-bottom:20px;
+        box-shadow:0 40x 12px rgba(0,0,0,0.1);
+    }
+    .cart-item img{
+        width:180px;
+
+    }
+    .item-details h2{
+        margin-bottom:10px;
+    }
+    .quantity-box{
+        display:flex;
+        align-items:center;
+        gap:15px;
+        margin:15px 0;
+    }
+    .quantity-box button{
+        width:35px;
+        height:35px;
+        border:none;
+        background: #4CAF50;
+        color:white;
+        font-size:20px;
+        border-radius: 5px;
+        cursor:pointer;
+    }
+    .quantity-box span{
+        font-size:20px;
+        font-weight:bold;
+    }
+    .remove-btn{
+        background: red;
+        color:white;
+        border:none;
+        padding:10px 20px;
+        border-radius:5px;
+        cursor:pointer;
+    }
+    .cart-summary{
+        background: white;
+        padding:25px;
+        border-radius:10px;
+        text-align:right;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    }
+    .checkout-btn{
+        background: #388E3C;
+        color:white;
+        border:none;
+        padding:12px 25px;
+        border-radius:5px;
+        cursor:pointer;
+    }
+    .checkout-btn:hover{
+        background: #4CAF50;
+    }
+    footer{
+    background:#1f2937;
+    color:white;
+    padding: 40px 20px;
+    text-align:center;
+    margin-top:50px;
+}
+.footer-text h3{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#8bc34a;
+}
+.footer-text p{
+    margin:10px 0;
+    font-size:16px;
+    color:#d1d5db;
+}
+.footer-text p:last-child{
+    margin-top:20px;
+    color:#9ca3af;
+    font-size:14px;
+}
+</style>
+<body>
+  <nav> <div class="logo">Elite Shop</div>
+<ul>
+                       <li><a href="index.html"><i class="fa-solid fa-home"></i> Home </a></li>
+            <li><a href="productpage.html"><i class="fa-solid fa-box"></i>Products</a></li>
+            <li><a href="about.html"> <i class="fa-solid fa-info-circle"></i>About</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-address-book"></i> Contacts</a></li>
+        </ul>
+    </nav>
+
+  <h1>Your shopping cart</h1>
+  <div class="cart-container">
+    <div class="cart-item">
+        <img src="smartwatch.png" alt="Smart Watch">
+        <div class="item-details">
+            <h2>Smart Watch</h2>
+            <p>Price:&#8377;<span id="price">2499</span></p>
+
+            <div class="quantity-box">
+                <button onclick="decreseQty()">-</button>
+                <span id="qty">1</span>
+                <button onclick="increseQty()">+</button>
+            </div>
+<p> <strong>Total:&#8377;<span id="total">2499</span></strong></p>
+            <button class="remove-btn">Remove</button>
+
+        </div>
+    </div>
+    <div class="cart-summary">
+        <h2>Total:&#8377;<span id="cart-total">2,499</span></h2>
+        <button class="checkout-btn">
+            Proceed to Checkout
+        </button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-text">
+        <h3>Elite Shop</h3>
+        <p> Your trusted online shopping destination.</p>
+        <p>support@eliteshop.com</p>
+        <p> +91 8919782368</p>
+            <p>&copy; 2026 Elite Shop. All Rights Reserved. </p>
+            </div>
+       </footer>
+       <script>
+        let quantity=1;
+        const price=2499;
+        function updateCart(){
+            document.getElementById("qty").innerText=quantity;
+            let total=quantity*price;
+            document.getElementById("total").innerText=total;
+                        document.getElementById("cart-total").innerText=total;
+
+        }
+        function increseQty(){
+            quantity++;
+            /*document.getElementById("qty").innerText=quantity;*/
+            updateCart();
+        }
+        function decreseQty(){
+            if(quantity>1){
+                quantity--;
+                updateCart();
+               /* document.getElementById("qty").innerText=quantity;*/
+            }
+        }
+       </script>
+</body>
+</html>
